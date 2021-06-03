@@ -6,7 +6,6 @@ import portrait_xlarge from "../../shared/assets/images/portrait_xlarge.jpeg";
 
 export const ModalWindow = ({ isOpen, handleClose, url }) => {
   const [marvelCharacter, setMarvelCharacter] = useState();
-  const [wikiUrl, setWikiUrl] = useState("")
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,7 +15,6 @@ export const ModalWindow = ({ isOpen, handleClose, url }) => {
     getMarvelCharacter(url).then((marvelCharacter) => {
       setLoading(false);
       setMarvelCharacter(marvelCharacter.data.results[0]);
-      setWikiUrl(marvelCharacter.data.results[0].urls.map(e => {if(e.type==="wiki") return e.url}))
     });
   }, [url]);
 
