@@ -24,15 +24,9 @@ body,
 
 .background {
   background-image: url("./shared/assets/images/avas_p_0189_ss12.jpeg");
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
-
-}
+  background-attachment: fixed;
+  min-height: calc(100vh - 0px)
+} 
 
 .character_card_name {
   font-size: 20px;
@@ -42,7 +36,6 @@ body,
 }
 
 .loading {
-  height: 100%;
   font-size: 50px;
   color: white;
   text-align: center;
