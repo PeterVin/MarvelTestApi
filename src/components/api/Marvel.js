@@ -86,7 +86,7 @@ export const Marvel = () => {
                     setCurrentUrl(
                       `${baseUrl}?limit=20&offset=${
                         limit - 20
-                      }&ts=${timeStamps}${key}`
+                      }&ts=${timeStamps}&${key}`
                     );
                   }
                 : null
@@ -99,7 +99,7 @@ export const Marvel = () => {
                     setCurrentUrl(
                       `${baseUrl}?limit=20&offset=${
                         limit + 20
-                      }&ts=${timeStamps}${key}`
+                      }&ts=${timeStamps}&${key}`
                     );
                   }
                 : null
